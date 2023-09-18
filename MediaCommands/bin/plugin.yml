@@ -1,0 +1,17 @@
+main: dev.madrid.mediacmd.MediaCommands
+name: MediaCommands
+version: 1.0
+authors: 
+  - ftMadrid
+
+commands:
+  mediacommands:
+    description: Main plugin command.
+    aliases: [mc]
+  stream:
+    description: Stream announcement command.
+  newvideo:
+    description: New Video announcement command.
+  recording:
+    description: Recording announcement command.
+    aliases: [rec, record]

@@ -1,0 +1,47 @@
+###################################################
+#                                                 #
+#  ░█████╗░░█████╗░███╗░░██╗███████╗██╗░██████╗░  #
+#  ██╔══██╗██╔══██╗████╗░██║██╔════╝██║██╔════╝░  #
+#  ██║░░╚═╝██║░░██║██╔██╗██║█████╗░░██║██║░░██╗░  #
+#  ██║░░██╗██║░░██║██║╚████║██╔══╝░░██║██║░░╚██╗  #
+#  ╚█████╔╝╚█████╔╝██║░╚███║██║░░░░░██║╚██████╔╝  #
+#  ░╚════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░░░░╚═╝░╚═════╝░  #
+#                                                 #
+###################################################
+
+commands: #Enable and disable a command.
+  stream: true
+  newvideo: true
+  recording: true
+
+messages:
+  reload: "&7[&6&lMediaCommands&7] &fThe plugin was &asuccessfully &freloaded."
+  no_permission: "&cYou don't have permission to execute this command."
+  disabled_command: "&cThis command is disabled."
+  on_cooldown: "&cYou still on command cooldown for another &n<cooldown> seconds&c."
+  invalid_link: "&cYou have to enter a valid link."
+  
+  
+configuration: #Edit messages & cooldown of the command.
+  stream:
+    cooldown: 60 #Cooldown in seconds.
+    message:
+      - "&7&m-------------------------------------"
+      - "&c❤ &5%player% &eis now on lives stream!"
+      - "&7➥ &f<stream_url>"
+      - "&7&m-------------------------------------"
+    
+  newvideo:
+    cooldown: 60 #Cooldown in seconds.
+    message:
+      - "&7&m----------------------------------------"
+      - "&c❤ &c%player% &ejust uploaded a new video!"
+      - "&7➥ &f<newvideo_url>"
+      - "&7&m----------------------------------------"
+    
+  recording:
+    cooldown: 60 #Cooldown in seconds.
+    message:
+      - "&7&m---------------------------------------"
+      - "&c❤ &6%player% &eis now recording a video!"
+      - "&7&m---------------------------------------"
