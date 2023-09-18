@@ -20,7 +20,6 @@ public class Recording implements CommandExecutor{
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String string, String[] args) {
 		
-		Player p = (Player) sender;
 		ConfigFile config = ConfigFile.getConfig();
 		String path = "commands.recording";
 		int cooldown = config.getInt("configuration.recording.cooldown");
@@ -34,6 +33,7 @@ public class Recording implements CommandExecutor{
 			return false;
 			
 		}
+		Player p = (Player) sender;
 		if(p.hasPermission("mediacommands.command.recording") && p.hasPermission("mediacommands.*")) {
 		if(config.getString(path).equals("true")) {
 		if(cooldowns.containsKey(p.getName())) {

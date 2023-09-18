@@ -20,7 +20,6 @@ public class Stream implements CommandExecutor{
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String string, String[] args) {	
 		
-		Player p = (Player) sender;
 		ConfigFile config = ConfigFile.getConfig();
 		String path = "commands.stream";
 		int cooldown = config.getInt("configuration.stream.cooldown");
@@ -34,7 +33,7 @@ public class Stream implements CommandExecutor{
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cThis command is only for players."));
 			return false;
 		}
-		
+		Player p = (Player) sender;
 		if(p.hasPermission("mediacommands.command.stream") && p.hasPermission("mediacommands.*")) {
 		if(config.getString(path).equals("true")) {
 		if(cooldowns.containsKey(p.getName())) {
